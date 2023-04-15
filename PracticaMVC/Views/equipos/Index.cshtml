@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    IEnumerable<string> strLista = new List<string> { "DAW", "DAW1", "DAW2", "DAW3" };
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h2>Mantenimiento de Equipos</h2>
+</div>
+<div class="row">
+    <div class="form-group">
+        @Html.Label("lblNombre","Nombre de equipo: ")
+        @Html.TextBox("txtNombre","",new{@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.Label("lblDesc","Descripcion:")
+        @Html.TextBox("txtDesc","",new{@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.Label("lblequipoID","ID del tipo de equipo")
+        @Html.TextBox("txtEquipoID","",new{@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.Label("lblMarcaID","ID de la marca: ")
+        @Html.TextBox("txtMarcaID","",new{@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.Label("lblModelo","Modelo: ")
+        @Html.TextBox("txtModel","",new{@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.Label("lblAnio","Año de compra: ")
+        @Html.TextBox("txtAnio","",new{@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.Label("lblcosto","Costo: ")
+        @Html.TextBox("txtCost","",new{@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.Label("lblvidautil","Vida Util: ")
+        @Html.TextBox("txtvutil","",new{@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.Label("lblestadoequipo","ID del estado de equipo: ")
+        @Html.TextBox("txtestadoE","",new{@class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.Label("lblEstado","Estado: ")
+        @Html.TextBox("txtEstado","",new{@class="form-control"})
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Guardar"/>
+        @Html.ActionLink("Guardar","Guardar","equipos")
+    </div>
+</div>
+
